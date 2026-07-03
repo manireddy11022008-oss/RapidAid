@@ -1,3 +1,5 @@
+# System Architecture
+
 ## Overview
 
 RapidAid follows a multi-tier architecture that connects patients, ambulances, hospitals, pharmacies, emergency authorities, and administrators through a centralized platform.
