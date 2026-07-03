@@ -1,14 +1,8 @@
-# RapidAid API Documentation
+# API Documentation
 
 ## Overview
 
-The RapidAid backend provides RESTful APIs for managing users, emergency requests, hospitals, ambulances, notifications, analytics, and public hazard reports.
-
-## Base URL
-
-```
-http://localhost:5000/api
-```
+RapidAid provides RESTful APIs for communication between the frontend, backend, hospitals, ambulances, pharmacies, and administrators.
 
 ---
 
@@ -16,20 +10,16 @@ http://localhost:5000/api
 
 ## Register User
 
-**POST**
+**POST** `/api/auth/register`
 
-```
-/auth/register
-```
-
-### Request Body
+### Request
 
 ```json
 {
   "name": "John Doe",
   "email": "john@example.com",
-  "phone": "9876543210",
-  "password": "password123"
+  "password": "********",
+  "phone": "9876543210"
 }
 ```
 
@@ -41,35 +31,13 @@ http://localhost:5000/api
 }
 ```
 
-## Login User
-
-**POST**
-
-```
-/auth/login
-```
-
-Returns a JWT token after successful authentication.
-
 ---
 
-# User APIs
+## Login
 
-## Get User Profile
+**POST** `/api/auth/login`
 
-**GET**
-
-```
-/users/profile
-```
-
-## Update User Profile
-
-**PUT**
-
-```
-/users/profile
-```
+Returns a JWT token after successful authentication.
 
 ---
 
@@ -77,47 +45,22 @@ Returns a JWT token after successful authentication.
 
 ## Create Emergency Request
 
-**POST**
+**POST** `/api/emergency`
 
-```
-/emergency/create
-```
-
-## Get Emergency Status
-
-**GET**
-
-```
-/emergency/:id
-```
-
-## Update Emergency Status
-
-**PUT**
-
-```
-/emergency/update/:id
-```
+Creates a new emergency request.
 
 ---
 
-# Ambulance APIs
+## Get Emergency Status
 
-## Get Available Ambulances
+**GET** `/api/emergency/:id`
 
-**GET**
+Returns:
 
-```
-/ambulances
-```
-
-## Update Ambulance Location
-
-**PUT**
-
-```
-/ambulances/location
-```
+- Current Status
+- Assigned Ambulance
+- Assigned Hospital
+- ETA
 
 ---
 
@@ -125,127 +68,85 @@ Returns a JWT token after successful authentication.
 
 ## Get Nearby Hospitals
 
-**GET**
+**GET** `/api/hospitals`
 
-```
-/hospitals
-```
+Returns hospitals sorted by AI recommendation.
+
+---
 
 ## Update Hospital Resources
 
-**PUT**
+**PUT** `/api/hospital/resources`
 
-```
-/hospitals/resources
-```
+Updates:
 
----
-
-# Medical Profile APIs
-
-## Generate QR Medical Profile
-
-**POST**
-
-```
-/medical-profile/generate-qr
-```
-
-## Get Medical Profile
-
-**GET**
-
-```
-/medical-profile/:userId
-```
+- ICU Beds
+- Equipment
+- Doctors
+- Emergency Capacity
 
 ---
 
-# Analytics APIs
+# Ambulance APIs
 
-## Get Dashboard Statistics
+## Get Nearby Ambulances
 
-**GET**
+**GET** `/api/ambulances`
 
-```
-/analytics/dashboard
-```
+Returns available ambulances near the patient.
+
+---
+
+## Update Ambulance Location
+
+**PUT** `/api/ambulance/location`
+
+Updates the ambulance's live GPS location.
 
 ---
 
 # Hazard Reporting APIs
 
-## Report Public Hazard
+## Submit Hazard Report
 
-**POST**
+**POST** `/api/hazards`
 
-```
-/hazards/report
-```
+Allows users to report:
 
-## Get Hazard Reports
-
-**GET**
-
-```
-/hazards
-```
+- Potholes
+- Damaged Roads
+- Traffic Signals
+- Street Lights
+- Construction Hazards
 
 ---
 
-# Notification APIs
+# AI APIs
 
-## Send Notification
+## Hospital Recommendation
 
-**POST**
+**POST** `/api/ai/recommend-hospital`
 
-```
-/notifications/send
-```
-
-## Get User Notifications
-
-**GET**
-
-```
-/notifications/:userId
-```
+Returns the most suitable hospital based on patient condition and hospital resources.
 
 ---
 
-## Authentication
+## Emergency Severity Analysis
 
-All protected endpoints require a valid JWT token.
+**POST** `/api/ai/severity`
 
-Example:
+Returns:
 
-```
-Authorization: Bearer <JWT_TOKEN>
-```
+- Critical
+- High
+- Medium
+- Low
 
 ---
 
-## API Response Format
+# Future APIs
 
-### Success Response
-
-```json
-{
-  "success": true,
-  "message": "Request completed successfully",
-  "data": {}
-}
-```
-
-### Error Response
-
-```json
-{
-  "success": false,
-  "message": "An error occurred"
-}
-```
-
-## Summary
-
-The RapidAid REST API enables secure communication between the frontend, backend, database, and external services. It supports authentication, emergency response, ambulance dispatch, hospital management, QR medical profiles, notifications, analytics, and public hazard reporting.
+- Wearable Device Integration
+- Government Emergency Services
+- Smartwatch Monitoring
+- AI Health Assistant
