@@ -1,1 +1,3 @@
-This folder stores screenshots of the RapidAid application.
+# RapidAid Screenshots
+
+This folder contains screenshots of the completed RapidAid application.
