@@ -1,15 +1,16 @@
+# Project Overview
 
-Introduction:
+## Introduction
 
 RapidAid is an AI-powered Intelligent Emergency Response, Smart Hospital Routing & Public Safety Management System designed to reduce fatalities during the critical Golden Hour by improving coordination between patients, ambulances, hospitals, pharmacies, and emergency authorities.
 
 The system provides real-time emergency response using AI-based hospital recommendation, intelligent ambulance dispatch, live GPS tracking, multilingual communication, and SMS fallback support for low-network areas.
 
-Vision:
+## Vision
 
 To build a smart emergency healthcare ecosystem that enables faster response, better hospital selection, and improved public safety through artificial intelligence and real-time communication.
 
-Mission:
+## Mission
 
 - Reduce emergency response time.
 - Improve patient survival during the Golden Hour.
@@ -17,7 +18,7 @@ Mission:
 - Improve healthcare accessibility in rural and urban areas.
 - Prevent future accidents through public hazard reporting.
 
-Project Goals:
+## Project Goals
 
 - One-Tap Emergency SOS
 - Intelligent Ambulance Dispatch
@@ -29,6 +30,6 @@ Project Goals:
 - Public Hazard Reporting
 - AI-Based Emergency Severity Assessment
 
-:Expected Outcome
+## Expected Outcome
 
 RapidAid aims to create a complete emergency response ecosystem that saves lives through intelligent coordination, real-time communication, and AI-powered decision-making.
