@@ -1,10 +1,12 @@
+# RapidAid Use Case Diagram
+
 ## Overview
 
 The Use Case Diagram represents the interactions between different actors and the RapidAid system. It defines the functionalities available to each user role.
 
 ---
 
-   mermaid
+```mermaid
 flowchart LR
 
 Patient((👤 Patient))
