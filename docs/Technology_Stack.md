@@ -1,10 +1,12 @@
-Overview:
+# Technology Stack
+
+## Overview
 
 RapidAid is designed as a modern web application using scalable technologies for frontend, backend, database, AI integration, and cloud services.
 
 ---
 
-Frontend:
+## Frontend
 
 - React.js
 - Tailwind CSS
@@ -17,7 +19,7 @@ Provides a responsive, user-friendly interface for patients, hospitals, and admi
 
 ---
 
-Backend:
+## Backend
 
 - Node.js
 - Express.js
@@ -27,7 +29,7 @@ Handles API requests, authentication, emergency routing logic, hospital manageme
 
 ---
 
-Database:
+## Database
 
 - MongoDB
 
@@ -36,7 +38,7 @@ Stores user information, hospital data, ambulance details, emergency requests, m
 
 ---
 
-AI & Machine Learning:
+## AI & Machine Learning
 
 - OpenAI API / Google Gemini API
 
@@ -50,7 +52,7 @@ AI & Machine Learning:
 
 ---
 
-Maps & Location Services:
+## Maps & Location Services
 
 - Google Maps API
 
@@ -63,7 +65,7 @@ Maps & Location Services:
 
 ---
 
-Communication Services:
+## Communication Services
 
 - Twilio SMS API
 
@@ -75,7 +77,7 @@ Communication Services:
 
 ---
 
-Development Tools:
+## Development Tools
 
 - Visual Studio Code
 - Git
@@ -85,13 +87,13 @@ Development Tools:
 
 ---
 
-Version Control:
+## Version Control
 
 Git and GitHub are used for source code management, collaboration, and project documentation.
 
 ---
 
-Future Integrations:
+## Future Integrations
 
 - Firebase Authentication
 - Smartwatch APIs
