@@ -1,8 +1,10 @@
+# RapidAid ER Diagram
+
 ## Overview
 
 The Entity Relationship (ER) Diagram represents the database structure of the RapidAid system. It defines the entities, their attributes, and the relationships between them.
 
-   mermaid
+```mermaid
 erDiagram
 
 USER ||--|| MEDICAL_PROFILE : has
@@ -91,8 +93,9 @@ ANALYTICS {
     string hospitalAssigned
     string ambulanceAssigned
 }
+```
 
-
+---
 
 ## Main Entities
 
