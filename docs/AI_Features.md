@@ -1,3 +1,5 @@
+# AI Features
+
 ## Overview
 
 RapidAid leverages Artificial Intelligence (AI) to enhance emergency response, improve decision-making, and optimize healthcare coordination. AI helps reduce response time, recommend suitable hospitals, and provide intelligent assistance during emergencies.
