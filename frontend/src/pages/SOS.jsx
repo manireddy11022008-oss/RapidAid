@@ -39,7 +39,7 @@ function SOS() {
   longitude: position.coords.longitude,
 });
           await axios.post(
-            "http://localhost:5000/api/emergency",
+            "https://rapidaid-backend-36qt.onrender.com/api/emergency",
             {
               name: user.name,
               phone: user.phone || "Not Available",

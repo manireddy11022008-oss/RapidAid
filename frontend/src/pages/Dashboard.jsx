@@ -23,7 +23,7 @@ function Dashboard() {
 
   const loadLatestEmergency = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/emergency");
+      const res = await axios.get("https://rapidaid-backend-36qt.onrender.com/api/emergency");
 
       if (res.data.length > 0) {
         setLatestEmergency(res.data[0]);

@@ -16,7 +16,7 @@ function AmbulanceDashboard() {
 
   const loadEmergencies = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/emergency");
+      const res = await axios.get("https://rapidaid-backend-36qt.onrender.com/api/emergency");
       setEmergencies(res.data);
     } catch (err) {
       console.log(err);

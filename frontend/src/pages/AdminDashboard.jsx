@@ -15,9 +15,9 @@ function AdminDashboard() {
 
   const loadData = async () => {
     try {
-      const userRes = await axios.get("http://localhost:5000/api/auth/users");
-      const hospitalRes = await axios.get("http://localhost:5000/api/hospitals");
-      const emergencyRes = await axios.get("http://localhost:5000/api/emergency");
+      const userRes = await axios.get("https://rapidaid-backend-36qt.onrender.com/api/auth/users");
+      const hospitalRes = await axios.get("https://rapidaid-backend-36qt.onrender.com/api/hospitals");
+      const emergencyRes = await axios.get("https://rapidaid-backend-36qt.onrender.com/api/emergency");
 
       setUsers(userRes.data);
       setHospitals(hospitalRes.data);

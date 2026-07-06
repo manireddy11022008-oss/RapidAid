@@ -10,7 +10,7 @@ function Hospitals() {
 
   const loadHospitals = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/hospitals");
+      const res = await axios.get("https://rapidaid-backend-36qt.onrender.com/api/hospitals");
       setHospitals(res.data);
     } catch (err) {
       console.log(err);
