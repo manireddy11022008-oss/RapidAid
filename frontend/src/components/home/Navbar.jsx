@@ -1,8 +1,10 @@
-import { Ambulance, Menu } from "lucide-react";
+import { useState } from "react";
+import { Ambulance, Menu, X } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const user = JSON.parse(localStorage.getItem("user"));
 
@@ -79,11 +81,89 @@ function Navbar() {
 
         </div>
 
-        <button className="md:hidden">
-          <Menu size={28} />
-        </button>
+        <button
+  className="md:hidden"
+  onClick={() => setMenuOpen(!menuOpen)}
+>
+  {menuOpen ? <X size={28} /> : <Menu size={28} />}
+</button>
+            </div>
 
-      </div>
+      {menuOpen && (
+        <div className="md:hidden bg-white shadow-lg">
+          <div className="flex flex-col gap-4 p-5">
+
+            <Link to="/" onClick={() => setMenuOpen(false)}>
+              Home
+            </Link>
+
+            <Link to="/features" onClick={() => setMenuOpen(false)}>
+              Features
+            </Link>
+
+            <Link to="/hospitals" onClick={() => setMenuOpen(false)}>
+              Hospitals
+            </Link>
+
+            <Link to="/contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </Link>
+
+            {user ? (
+              <>
+                <Link to="/dashboard" onClick={() => setMenuOpen(false)}>
+                  Patient Dashboard
+                </Link>
+
+                <Link to="/sos" onClick={() => setMenuOpen(false)}>
+                  SOS
+                </Link>
+
+                <Link to="/ambulance" onClick={() => setMenuOpen(false)}>
+                  Ambulance
+                </Link>
+
+                <Link
+                  to="/hospital-dashboard"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Hospital Dashboard
+                </Link>
+
+                <Link to="/admin" onClick={() => setMenuOpen(false)}>
+                  Admin Dashboard
+                </Link>
+
+                <button
+                  onClick={() => {
+                    logout();
+                    setMenuOpen(false);
+                  }}
+                  className="bg-red-600 text-white py-2 rounded-lg"
+                >
+                  Logout
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" onClick={() => setMenuOpen(false)}>
+                  <button className="w-full border border-red-600 text-red-600 py-2 rounded-lg">
+                    Login
+                  </button>
+                </Link>
+
+                <Link to="/register" onClick={() => setMenuOpen(false)}>
+                  <button className="w-full bg-red-600 text-white py-2 rounded-lg">
+                    Register
+                  </button>
+                </Link>
+              </>
+            )}
+
+          </div>
+        </div>
+      )}
+
     </nav>
   );
 }
